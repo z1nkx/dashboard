@@ -19,7 +19,7 @@ const Home: NextPage = () => {
             
             <h2 className={styles.selectBoxTitle}>Mint with Z1</h2>
             <p className={styles.selectBoxDescription}>
-              44Z1
+              44Z1 (currently closed)
             </p>
         </div>
 
