@@ -11,18 +11,17 @@ const Mint: NextPage = () => {
       <h1 className={styles.h1}>Mint An NFT!</h1>
 
       <p className={styles.explain}>
-        Here is where we use our <b>NFT Drop</b> contract to allow users to mint
-        one of the NFTs that we lazy minted.
+       44z1
       </p>
       <hr className={`${styles.smallDivider} ${styles.detailPageHr}`} />
 
       <Web3Button
         colorMode="dark"
         accentColor="#5204BF"
-        contractAddress="0x322067594DBCE69A9a9711BC393440aA5e3Aaca1"
+        contractAddress="0xC2C717cAc3da3FFfc19E3F63A175Eb80A1Bd312d"
         action={(contract) => contract.erc721.claim(1)}
         onSuccess={() => {
-          alert("NFT Claimed!");
+          alert("NFT Minted!");
           router.push(`/stake`);
         }}
         onError={(error) => {
@@ -30,7 +29,7 @@ const Mint: NextPage = () => {
           alert(error);
         }}
       >
-        Claim An NFT
+        Mint An NFT
       </Web3Button>
     </div>
   );

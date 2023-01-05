@@ -11,9 +11,9 @@ import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
 
-const nftDropContractAddress = "0x322067594DBCE69A9a9711BC393440aA5e3Aaca1";
-const tokenContractAddress = "0xb1cF059e6847e4270920a02e969CA2E016AeA22B";
-const stakingContractAddress = "0xB712975e13427ac804177E7CebF08781bbF9B89c";
+const nftDropContractAddress = "0xC2C717cAc3da3FFfc19E3F63A175Eb80A1Bd312d";
+const tokenContractAddress = "0xf693aecA9248aB930D6528EC16faB50C2b68912f";
+const stakingContractAddress = "0x0cFDF99Ba97d5e6DD5e442d9b3d3E483134DCB3e";
 
 const Stake: NextPage = () => {
   // Wallet Connection Hooks
@@ -113,7 +113,7 @@ const Stake: NextPage = () => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.h1}>Stake Your NFTs</h1>
+      <h1 className={styles.h1}>Your Z1 Dashboard</h1>
 
       <hr className={`${styles.divider} ${styles.spacerTop}`} />
 
@@ -123,11 +123,11 @@ const Stake: NextPage = () => {
         </button>
       ) : (
         <>
-          <h2>Your Tokens</h2>
+          <h2>Z1 Tokens</h2>
 
           <div className={styles.tokenGrid}>
             <div className={styles.tokenItem}>
-              <h3 className={styles.tokenLabel}>Claimable Rewards</h3>
+              <h3 className={styles.tokenLabel}>Gold</h3>
               <p className={styles.tokenValue}>
                 <b>
                   {!claimableRewards
@@ -138,44 +138,16 @@ const Stake: NextPage = () => {
               </p>
             </div>
             <div className={styles.tokenItem}>
-              <h3 className={styles.tokenLabel}>Current Balance</h3>
+              <h3 className={styles.tokenLabel}>Z1 Balance</h3>
               <p className={styles.tokenValue}>
                 <b>{tokenBalance?.displayValue}</b> {tokenBalance?.symbol}
               </p>
             </div>
           </div>
 
-          <button
-            className={`${styles.mainButton} ${styles.spacerTop}`}
-            onClick={() => claimRewards()}
-          >
-            Claim Rewards
-          </button>
-
           <hr className={`${styles.divider} ${styles.spacerTop}`} />
 
-          <h2>Your Staked NFTs</h2>
-          <div className={styles.nftBoxGrid}>
-            {stakedNfts?.map((nft) => (
-              <div className={styles.nftBox} key={nft.metadata.id.toString()}>
-                <ThirdwebNftMedia
-                  metadata={nft.metadata}
-                  className={styles.nftMedia}
-                />
-                <h3>{nft.metadata.name}</h3>
-                <button
-                  className={`${styles.mainButton} ${styles.spacerBottom}`}
-                  onClick={() => withdraw(nft.metadata.id)}
-                >
-                  Withdraw
-                </button>
-              </div>
-            ))}
-          </div>
-
-          <hr className={`${styles.divider} ${styles.spacerTop}`} />
-
-          <h2>Your Unstaked NFTs</h2>
+          <h2>Z1 Colour Collection</h2>
 
           <div className={styles.nftBoxGrid}>
             {ownedNfts?.map((nft) => (
@@ -185,12 +157,7 @@ const Stake: NextPage = () => {
                   className={styles.nftMedia}
                 />
                 <h3>{nft.metadata.name}</h3>
-                <button
-                  className={`${styles.mainButton} ${styles.spacerBottom}`}
-                  onClick={() => stakeNft(nft.metadata.id)}
-                >
-                  Stake
-                </button>
+              
               </div>
             ))}
           </div>

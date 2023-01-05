@@ -24,7 +24,7 @@ select {
 }
 
 :root {
-  --black: #1c1e21;
+  --black: #000000;
   --white: #ffffff;
   --tw-color1: #a855f7;
   --tw-color1-hover: #9333ea;
@@ -32,7 +32,7 @@ select {
 
 body {
   background: var(--black);
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto Mono", monospace;
   color: var(--white);
   display: flex;
   margin: 0;
@@ -40,5 +40,5 @@ body {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1rem;
 }
