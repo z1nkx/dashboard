@@ -157,7 +157,9 @@ const Stake: NextPage = () => {
                   className={styles.nftMedia}
                 />
                 <h3>{nft.metadata.name}</h3>
-              
+              <button>Burn(coming soon)</button>
+                
+                
               </div>
             ))}
           </div>
